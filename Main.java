@@ -1,6 +1,6 @@
 public class Main {
   public static void main(String[] args) {
-    SmartHomeManager manager = new SmartHomeManaer();
+    SmartHomeManager manager = new SmartHomeManager();
 
     DoorLock lock = new DoorLock("DL", "Door Lock");
     SmartLight light = new SmartLight("SL", "Light", 70);
@@ -16,7 +16,7 @@ public class Main {
     
     try {
       manager.findDevice("N/A");
-    } catch (SmartHomeManager.DeviceNotFoundExcption e) {
+    } catch (SmartHomeManager.DeviceNotFoundException e) {
       System.out.println(e.getMessage());
     }
     
