@@ -36,7 +36,7 @@ public class DoorLock extends smartDevice implements Controllable {
 
     public void recordFailedAttempt() {
         failedAttempts++;
-        System.out.println(getName() + " — failed attempt #" + failedAttempts + ".");
+        System.out.println(getName() + " - failed attempt #" + failedAttempts + ".");
     }
 
     public boolean isLocked() {
