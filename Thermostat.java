@@ -1,7 +1,7 @@
 /**
  * Represents a smart thermostat.
  * Does NOT implement Controllable because a thermostat is always
- * "active" — it does not have a simple on/off state like a light.
+ * "active" - it does not have a simple on/off state like a light.
  * Instead it exposes temperature-specific controls.
  */
 public class Thermostat extends smartDevice {

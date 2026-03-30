@@ -6,7 +6,7 @@
 public class SmartLight extends smartDevice implements Controllable {
 
     private boolean isOn;
-    private int brightness; // 0–100
+    private int brightness; // 0-100
 
     public SmartLight(String deviceID, String name, int brightness) {
         super(deviceID, name);
