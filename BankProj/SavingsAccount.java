@@ -1,3 +1,5 @@
+package BankProj;
+
 public class SavingsAccount extends Account implements Transferable {
 
     private double interestRate;

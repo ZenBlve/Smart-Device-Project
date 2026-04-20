@@ -1,3 +1,5 @@
+package BankProj;
+
 public class CheckingAccount extends Account implements Transferable {
 
     public CheckingAccount(String accountNumber, String ownerName, double initialBalance) {
