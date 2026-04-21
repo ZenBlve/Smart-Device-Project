@@ -1,5 +1,3 @@
-package BankProj;
-
 public abstract class Account {
 
     private String accountNumber;

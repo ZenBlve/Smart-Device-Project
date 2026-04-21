@@ -1,16 +1,12 @@
-package BankProj;
+public class CheckingAccount extends Account implements Transferable {
 
-public class BusinessAccount extends Account implements Transferable {
-
-    private double overdraftLimit = 1000.0;
-
-    public BusinessAccount(String accountNumber, String ownerName, double initialBalance) {
+    public CheckingAccount(String accountNumber, String ownerName, double initialBalance) {
         super(accountNumber, ownerName, initialBalance);
     }
 
     @Override
     public void withdraw(double amount) throws InsufficientFundsException {
-        if (amount <= 0 || amount > getBalance() + overdraftLimit) {
+        if (amount <= 0 || amount > getBalance()) {
             throw new InsufficientFundsException(amount, getBalance());
         }
         setBalance(getBalance() - amount);
@@ -27,9 +23,8 @@ public class BusinessAccount extends Account implements Transferable {
 
     @Override
     public void displayAccountInfo() {
-        System.out.println("Business | " + getAccountNumber()
+        System.out.println("Checking | " + getAccountNumber()
                 + " | " + getOwnerName()
-                + " | $" + getBalance()
-                + " | Overdraft: 1000");
+                + " | $" + getBalance());
     }
 }
