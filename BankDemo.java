@@ -88,7 +88,7 @@ public class BankDemo {
             System.out.println("Deleted account CHK-002");
             bank.findAccount("CHK-002");
         } catch (AccountNotFoundException e) {
-            System.out.println("Confirmed deleted — " + e.getMessage());
+            System.out.println("Confirmed deleted - " + e.getMessage());
         }
 
         System.out.println();
