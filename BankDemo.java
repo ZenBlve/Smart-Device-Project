@@ -36,10 +36,10 @@ public class BankDemo {
 
         System.out.println("Transferable Interface Demo");
 
-        Transferable transferableAccount = savings;
+        Transferable transferableAccount = business;
         try {
             transferableAccount.transfer(checking, 50.00);
-            System.out.println("Transferred $50 from SAV-001 to CHK-001 via Transferable interface");
+            System.out.println("Transferred $50 from BIZ-001 to CHK-001 via Transferable interface");
         } catch (InsufficientFundsException e) {
             System.out.println("Transfer failed: " + e.getMessage());
         }
