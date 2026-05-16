@@ -1,4 +1,4 @@
-public class SavingsAccount extends Account implements Transferable {
+public class SavingsAccount extends Account {
 
     private double interestRate;
 
@@ -17,15 +17,6 @@ public class SavingsAccount extends Account implements Transferable {
             throw new InsufficientFundsException(amount, getBalance());
         }
         setBalance(getBalance() - amount);
-    }
-
-    @Override
-    public void transfer(Account target, double amount) throws InsufficientFundsException {
-        if (target == null) {
-            throw new IllegalArgumentException("Target account cannot be null");
-        }
-        this.withdraw(amount);
-        target.deposit(amount);
     }
 
     @Override

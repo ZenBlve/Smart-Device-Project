@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Bank {
@@ -25,6 +26,11 @@ public class Bank {
             }
         }
         throw new AccountNotFoundException(accountNumber);
+    }
+
+    // Returns a read-only view of all accounts (used for polymorphic display)
+    public List<Account> findAllAccounts() {
+        return Collections.unmodifiableList(accounts);
     }
 
     public void deposit(String accountNumber, double amount)
